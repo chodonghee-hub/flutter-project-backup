@@ -1,0 +1,18 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.calendar.page.example.example">
+    <!-- Flutter needs it to communicate with the running application
+         to allow setting breakpoints, to provide hot reload, etc.
+    -->
+    <activity android:name="com.kakao.sdk.flutter.AuthCodeCustomTabsActivity">
+        <intent-filter android:label="flutter_web_auth">
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+
+            <!-- Redirect URI, "kakao${YOUR_NATIVE_APP_KEY}://oauth" 형식 -->
+            <data android:scheme="kakaoe9e0b9ddd22224c86f7af2f17b53e04d" android:host="oauth"/>
+        </intent-filter>
+    </activity>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>
